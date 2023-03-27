@@ -1,15 +1,17 @@
-node_modules
 __sol
-event-react-lab1/
 
-lab1
-to-do-rapp
-to-do-sapp
+node_modules
+/.pnp
+.pnp.js
 
+base-build
+build
 build
 coverage
 dist
 npm
+!scripts/npm
+.DS_Store
 
 npm-debug.log*
 
@@ -23,3 +25,4 @@ npm-debug.log*
 .husky/*
 .yarn/*
 
+.idea
