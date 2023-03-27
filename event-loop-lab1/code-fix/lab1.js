@@ -1,7 +1,9 @@
-// TODO: Fix the errors in the functions below!
+// TODO: Fix the errors in the functions below! emilien
 
 const functions = {
   checkEventLoop() {
+    console.log('this is the start');
+
     setTimeout(() => {
       console.log('Callback 1: this is a msg from call back');
     }); // has a default time value of 0
@@ -17,22 +19,23 @@ const functions = {
 
   executeAfterDelay(callback, delay) {
     // use setTimeout
-    callback(delay);
+    setTimeout(callback, delay);
   },
 
   executeInOrder(callback1, callback2) {
-    setTimeout(callback1, 10);
-    setTimeout(callback2);
+    setTimeout(callback1);
+    setTimeout(callback2, 0);
   },
 
   stopInterval(intervalId, callback) {
     // use clearInterval
+    clearInterval(intervalId);
     callback();
   },
 
   executePromise(callback) {
     const promise = new Promise((resolve) => {
-      resolve({ status: false, value: 'bar' });
+      resolve({ status: true, value: 'foo' });
     });
     setTimeout(() => {
       promise.then((result) => {
@@ -43,12 +46,14 @@ const functions = {
 
   executePromises(callback) {
     const promises = [
-      new Promise((resolve) => setTimeout(() => resolve(), 1000)),
-      new Promise((resolve) => setTimeout(() => resolve(), 500)),
-      new Promise((resolve) => setTimeout(() => resolve(), 250)),
+      new Promise((resolve) => setTimeout(() => resolve('first'), 1000)),
+      new Promise((resolve) => setTimeout(() => resolve('second'), 500)),
+      new Promise((resolve) => setTimeout(() => resolve('third'), 250)),
     ];
     Promise.all(promises).then(callback);
   },
 };
 
 module.exports = functions;
+
+//emilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilien
