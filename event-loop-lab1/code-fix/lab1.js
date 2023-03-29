@@ -1,4 +1,4 @@
-// TODO: Fix the errors in the functions below! emilien
+// TODO: Fix the errors in the functions below!
 
 const functions = {
   checkEventLoop() {
@@ -19,27 +19,25 @@ const functions = {
 
   executeAfterDelay(callback, delay) {
     // use setTimeout
-    setTimeout(callback, delay);
+    delay;
   },
 
   executeInOrder(callback1, callback2) {
-    setTimeout(callback1);
-    setTimeout(callback2, 0);
+    setTimeout(callback1, 10);
+    setTimeout(callback2);
   },
 
   stopInterval(intervalId, callback) {
     // use clearInterval
-    clearInterval(intervalId);
-    callback();
   },
 
   executePromise(callback) {
     const promise = new Promise((resolve) => {
-      resolve({ status: true, value: 'foo' });
+      resolve(value);
     });
-    setTimeout(() => {
-      promise.then((result) => {
-        callback(result);
+    setImmediate(() => {
+      promise.then((value) => {
+        callback(value);
       });
     });
   },
@@ -55,5 +53,3 @@ const functions = {
 };
 
 module.exports = functions;
-
-//emilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilienemilien
