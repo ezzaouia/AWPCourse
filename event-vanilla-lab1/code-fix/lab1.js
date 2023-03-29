@@ -6,15 +6,16 @@ const functions = {
   },
 
   removeClickListener(element, callback) {
-    //
+    element.removeEventListener('click', callback);
   },
 
   addKeyDownListener(element, callback) {
-    //
+    element.addEventListener('keydown', callback);
   },
 
   removeKeyDownListener(element, callback) {
     //
+    element.removeEventListener('keydown', callback);
   },
 
   addClickWithCaptureListener(element, callback) {
