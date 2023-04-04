@@ -16,10 +16,17 @@ export function AddNumber(props) {
       <button
         type="button"
         onClick={() => {
-          setSum(sum + parseInt(input));
+          const nombre = parseInt(input);
+
+          if (typeof nombre === "number" && !isNaN(nombre)) {
+            setSum(sum + parseInt(input));
+          }
         }}
       >
         <input
+          onClick={(event) => {
+            event.stopPropagation();
+          }}
           onChange={(event) => {
             setInput(event.target.value);
           }}
