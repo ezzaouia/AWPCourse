@@ -3482,6 +3482,11 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
+raviger@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/raviger/-/raviger-4.1.2.tgz#06b277171393388cd50c5db6a4fe53d44673980a"
+  integrity sha512-w5SodiqNhlFLl5zpvZxICdT+ORM+b0YI6w0jlJJS/yzOM1MRIN1nGQvOzds/tWKrN0V1vUBzttkEv7djHQUMdA==
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"

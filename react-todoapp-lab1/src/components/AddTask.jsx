@@ -9,7 +9,7 @@ function AddTask(props) {
         placeholder="Ajouter un todo"
         size="100"
         onChange={(event) => {
-          setInput(event.target.value);
+          //
         }}
       />
       <button onClick={() => props.addTask(input)}>Add Task</button>

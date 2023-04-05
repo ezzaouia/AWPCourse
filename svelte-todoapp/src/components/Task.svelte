@@ -7,7 +7,12 @@
   let status = task.done ? "done" : "todo";
 </script>
 
-<input id={index} type="checkbox" on:change={() => changeDone(index)} />
+<input
+  id={index}
+  type="checkbox"
+  on:change={() => changeDone(index)}
+  checked={task.done}
+/>
 <label class={status} for={index}>{task.text}</label>
 
 <style>
