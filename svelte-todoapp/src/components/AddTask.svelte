@@ -9,9 +9,9 @@
   type="text"
   placeholder="Ajouter un todo"
   size="100"
-  onChange={(e) => {
+  on:change={(e) => {
     input = e.target.value;
   }}
 />
 <!-- Todo -->
-<button onClick={() => addTask(input)}>Add Todo</button>
+<button on:click={() => addTask(input)}>Add Todo</button>

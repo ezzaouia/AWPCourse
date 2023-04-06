@@ -2,15 +2,20 @@ import React, { useState } from "react";
 
 export function Counter() {
   const [count, setCount] = useState(0);
-  const [toto, setBar] = useState(0);
-  const [foo, setFoo] = useState({ name: "mohamed" });
-  const [tasks, setTasks] = useState(["blabla"]);
+  const [name, setName] = useState("Laval");
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  //
+  // const handleClick = () => {
+  //   setCount(count + 1);
+  // }
 
   return (
     <div className="card">
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <button onClick={handleClick}>count {count}</button>
     </div>
   );
 }

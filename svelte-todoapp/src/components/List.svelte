@@ -11,7 +11,7 @@
 <ol>
   {#each tasks as task, index}
     <li>
-      <Task />
+      <Task {index} {task} {changeDone} />
     </li>
   {/each}
 </ol>

@@ -10,7 +10,12 @@ function App() {
       { text: 'TODO ??', done: false },
     ]
    */
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { text: "Learn js", done: false },
+    { text: "Clean bedroom", done: true },
+    { text: "TODO ??", done: false },
+    { text: "zetzet ??", done: false },
+  ]);
 
   function addTask(text) {
     const task = {
@@ -30,8 +35,8 @@ function App() {
   return (
     <>
       <h1>Todo List App</h1>
-      <List />
-      <AddTask />
+      <List todoList={tasks} changeDone={changeDone} />
+      <AddTask addTask={addTask} />
     </>
   );
 }

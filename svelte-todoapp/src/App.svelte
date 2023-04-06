@@ -12,13 +12,18 @@
       { text: 'TODO ??', done: false },
     ]
    */
-  let tasks;
+  let toto = [
+    { text: "Learn js", done: false },
+    { text: "Clean bedroom", done: true },
+    { text: "TODO ??", done: false },
+  ];
 
   const changeDone = (index) => {
-    const newTasks = [...tasks]; // copie du tableau
+    const newTasks = [...toto]; // copie du tableau
     newTasks[index] = { ...newTasks[index], done: !newTasks[index].done };
 
     // Todo
+    toto = newTasks;
   };
 
   const addTask = (text) => {
@@ -26,7 +31,7 @@
       text: text,
       done: false,
     };
-    tasks = [...tasks, task];
+    toto = [...toto, task];
   };
 </script>
 
@@ -59,9 +64,9 @@
     <h1>Todo List App</h1>
 
     <!--Todo -->
-    <List />
+    <List tasks={toto} {changeDone} />
     <!--Todo -->
-    <AddTask />
+    <AddTask {addTask} />
   </div>
 </main>
 

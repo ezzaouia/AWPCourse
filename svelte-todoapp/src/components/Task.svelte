@@ -4,7 +4,7 @@
   export let task;
 
   // Todo
-  let status = task.done ? "done" : "todo";
+  $: status = task.done ? "done" : "todo";
 </script>
 
 <input

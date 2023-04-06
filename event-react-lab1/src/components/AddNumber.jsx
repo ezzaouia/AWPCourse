@@ -17,15 +17,16 @@ export function AddNumber(props) {
         type="button"
         onClick={() => {
           const nombre = parseInt(input);
+          console.log("button clicked");
 
           if (typeof nombre === "number" && !isNaN(nombre)) {
-            setSum(sum + parseInt(input));
+            setSum(sum + nombre);
           }
         }}
       >
         <input
-          onClick={(event) => {
-            event.stopPropagation();
+          onClick={(e) => {
+            e.stopPropagation();
           }}
           onChange={(event) => {
             setInput(event.target.value);
